@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Portfolio</title>
+    <link rel="stylesheet" href="styles.css"> </head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</head>
+<style>
+    h1{
+        color: #A85163 !important;
+        font-weight: 50;
+    }
+    .headerTitle {
+        border-color: #a8516242 !important;
+    }
+    .AProposContainer {
+       background-color: #b9979e !important;
+       transition: 0.5s;
+    }
+    .card-project {
+        width: 400px !important;
+        /* height: 200px !important; */
+        border: 1px solid #c7b5b942 !important;
+        transition: 0.5s;
+    }
+    footer{
+        background-color : #b9979e !important;
+    }
+    .backgroundCopy {
+        background-color: #46414262 !important;
+        bottom: 2% !important;
+    }
+    .successCopy {
+        display: none !important;
+        transition: 0.5s;
+    }
+    .project {
+        transition: 0.5s;
+    }
+    @media screen and (max-width: 1638px){
+        .card-project {
+            width: 300px !important;
+            transition: 0.5s;
+        }
+    }
+    @media screen and (max-width: 1266px){
+        .card-project {
+            width: 200px !important;
+            transition: 0.5s;
+        }
+    }
+    @media screen and (max-width: 1018px){
+        .card-project {
+            width: 40% !important;
+            
+            transition: 0.5s;
+        }
+        .AProposContainer {
+            width: 100% !important;
+            transition: 0.5s;
+        }
+        .project {
+            transition: 0.5s;
+            width: 100% !important;
+            /* justify-content: space-between !important; */
+        }
+        #projects {
+            width: 100% !important;
+         
+            transition: 0.5s;
+        }
+        
+    }
+</style>
+<body class="bg-light">
+        <nav class="navbar navbar-expand-lg bg-white fw-bold">
+            <div class="container-fluid w-75 d-flex justify-content-center">
+                <ul class="navbar-nav w-75 d-flex flex-row justify-content-around">
+                    <li class="nav-item">
+                        <a class="nav-link fw-light" href="#about">À propos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-light" href="#projects">Projets</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-light" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    <main>
+        <div class="w-100 d-flex shadow p-3 bg-body">
+            <div class="w-50 mx-auto d-flex flex-column">
+                <h1 class="headerTitle text-center border border-top-0 border-start-0 border-end-0 border-bottom-1 border-2 pb-2">Leclerc Ludwig</h1>
+                <small class="text-center fw-light text-secondary">Developpeur web front</small>
+            </div>
+        </div>
+        <div class="p-3 w-50 bg-secondary AProposContainer d-flex flex-row mx-auto">
+            <div>
+                <h1 class="fw-medium text-white text-center">A propos de moi</h1>
+                <p class="w-75 text-white mx-auto">Bonjour, je m'appelle Ludwig. ça ne fait pas longtemps que je suis sortis de formation de développement web.
+                    j'ai cette envie de mettre en pratique mes compétences pour vous aidez dans vos projets.</p>
+            </div>
+            <img src="asset/photo.jpg" class="rounded-circle" alt="photo de profil" width="200" height="200">
+        </div>
+        <section id="projects" class="w-50 mx-auto">
+            <h1 class="mt-3 text-center">Mes projets</h1>
+            <div class="project d-flex justify-content-around">
+                <div class="card-project w-50 p-2 shadow">
+                    <h1 class="text-center h3 fw-light">Jeu de role</h1>
+                    <p class="small p-2 mb-2">Petit site personnel qui permet de stocker divers informations sur des personnages comme des stats
+                        et des inventaires. Le site est toujours en développement.
+                    </p>
+                    <a href="lien_vers_le_projet_1">Voir le projet</a>
+                </div>
+                <div class="card-project w-50 p-2 shadow">
+                    <h3>Projet 2</h3>
+                    <p>Description du projet 2.</p>
+                    <a href="lien_vers_le_projet_2">Voir le projet</a>
+                </div>
+            </div>
+            </section>
+    </main>
+    <footer class="w-100 d-flex align-items-center flex-column p-3 mt-5 mb-0 position-absolute bottom-0 ">
+        <div class="d-flex flex-row justify-content-center align-items-center">
+            <a href="https://www.linkedin.com/in/ludwig-leclerc-6b9a2b1b5/" target="_blank"><img class="me-3" src="asset/linkedin.svg" alt="logo linkedin" width="20" height="20"></a>
+            <a href="" onclick="copyText()"><img src="asset/mail.svg" alt="logo mail" width="21" height="21"></a>
+        </div>
+        <!-- <button onclick="copyText()">Copier mon email</button> -->
+        <p class="mt-3 text-center fw-light text-white">&copy; Ludwig Leclerc - 2024</p>
+    </footer>
+    <script>
+       let mail = "ludwig.leclerc@me.com";
+
+       function copyText() {
+           navigator.clipboard.writeText(mail);
+
+           let copyMessage = document.createElement("div");
+           copyMessage.classList.add("backgroundCopy", "text-white", "p-2", "text-center", "position-absolute", "bottom-0", "start-50","translate-middle-x", "rounded", "w-25","fw-light");
+
+           copyMessage.innerHTML = "L'email a bien été copie !";
+           document.body.appendChild(copyMessage);
+
+           setTimeout(function() {
+                //transition
+               copyMessage.classList.add("successCopy");
+               copyMessage.remove();
+           }, 3000);
+
+        }
+    </script>
+</body>
+</html>
