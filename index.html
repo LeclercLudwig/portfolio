@@ -55,7 +55,8 @@
     @media screen and (max-width: 1018px){
         .card-project {
             width: 40% !important;
-            
+            /* height: 50px !important; */
+            /* font-size: 10px !important; */
             transition: 0.5s;
         }
         .AProposContainer {
@@ -73,6 +74,18 @@
             transition: 0.5s;
         }
         
+    }
+    @media screen and (max-width: 436px){
+        .AProposContainer {
+            flex-direction: column-reverse !important;
+        }
+        .photo {
+            width: 40px !important;
+            height: 40px !important;
+        }
+        .presentation {
+            width: 100% !important;
+        }
     }
 </style>
 <body class="bg-light">
@@ -101,18 +114,17 @@
         <div class="p-3 w-50 bg-secondary AProposContainer d-flex flex-row mx-auto">
             <div>
                 <h1 class="fw-medium text-white text-center">A propos de moi</h1>
-                <p class="w-75 text-white mx-auto">Bonjour, je m'appelle Ludwig. ça ne fait pas longtemps que je suis sortis de formation de développement web.
+                <p class="w-75 text-white mx-auto presentation">Bonjour, je m'appelle Ludwig. ça ne fait pas longtemps que je suis sortis de formation de développement web.
                     j'ai cette envie de mettre en pratique mes compétences pour vous aidez dans vos projets.</p>
             </div>
-            <img src="asset/photo.jpg" class="rounded-circle" alt="photo de profil" width="200" height="200">
+            <img src="asset/photo.jpg" class="photo rounded-circle" alt="photo de profil" width="200" height="200">
         </div>
         <section id="projects" class="w-50 mx-auto">
             <h1 class="mt-3 text-center">Mes projets</h1>
             <div class="project d-flex justify-content-around">
                 <div class="card-project w-50 p-2 shadow">
                     <h1 class="text-center h3 fw-light">Jeu de role</h1>
-                    <p class="small p-2 mb-2">Petit site personnel qui permet de stocker divers informations sur des personnages comme des stats
-                        et des inventaires. Le site est toujours en développement.
+                    <p class="small p-2 mb-2">Petit site de gestion de jeux de role
                     </p>
                     <a href="lien_vers_le_projet_1">Voir le projet</a>
                 </div>
